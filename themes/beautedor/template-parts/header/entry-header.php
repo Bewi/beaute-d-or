@@ -9,7 +9,14 @@
 
 $discussion = ! is_page() && twentynineteen_can_show_post_thumbnail() ? twentynineteen_get_discussion_data() : null; ?>
 
-<?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
+<?php if( is_home() || is_front_page() ) { ?>
+	<div class="flex flex-row">
+		<h1 class="flex-grow"><?php the_title() ?></h1>
+		<iframe class="treatwell" src="https://www.treatwell.be/fr/salon/4735/review-widget"></iframe>
+	</div>
+<?php } else { 
+	echo the_title( '<h1 class="entry-title">', '</h1>' ); 
+}?>
 
 <?php if ( ! is_page() ) : ?>
 <div class="entry-meta">

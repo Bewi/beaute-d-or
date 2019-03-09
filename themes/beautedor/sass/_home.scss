@@ -1,0 +1,57 @@
+.entry-header{
+    background-color: $color__primary;
+    color: $color__text-primary;
+    overflow: hidden;
+    .container {
+        padding-top: 4rem;
+        padding-bottom: 13rem;
+    }
+
+    h1 {
+        margin: 0 0 0 0;
+    }
+}
+
+.treatwell {
+    border: none;
+    height: 155px;
+    width: 168px;
+}
+
+.display-posts-listing {
+    color: #333643;
+    font-weight: 300;
+    background: white;
+    list-style: none;
+    padding: 0;
+    box-shadow: 0 10px 20px 0 rgba(51,54,67,0.25);
+    border-radius: .3rem;
+    padding: 5rem 4rem;
+    margin-top: -6rem;
+    display: flex;
+
+    @include breakpoint {
+        padding: 3rem 2rem;
+    }
+
+    &:before {
+        content: 'Notre derni\00E8re actualit\00E9';
+        font-weight: 600;
+        font-size: 2.8rem;
+        width: 27rem;
+        min-width: 27rem;
+    }
+
+    .title { 
+        display: none;
+    }
+
+    p {
+        margin: 0 0 0 2rem;
+    }
+
+    li {
+        flex-grow: 1;
+    }
+
+}
