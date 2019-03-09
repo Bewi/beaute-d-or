@@ -1,0 +1,36 @@
+$color__primary: #333643;
+$color__secondary: #fff;
+$color__fancy: #B7D9D7;
+
+$color__text-primary: #fff;
+$color__text-secondary: #333643;
+$color__text-hover: lighten(#111, 22.5%);
+
+$color__link: #fff;
+$color__link-visited: #fff;
+$color__link-hover: darken( $color__link, 10% );
+
+// Fonts
+
+@import url('https://fonts.googleapis.com/css?family=Montserrat:300,500,600');
+$font-family: 'Montserrat', sans-serif;
+
+$font-size__root: 62.5%; // so 1 rem = 10px;
+$font-size__base: 1.6rem;
+
+$text__xs: 1.3rem;
+$text__s: 1.4rem;
+$text__m: 1.6rem;
+$text__l: 1.8rem;
+
+// spacings
+$spacing-unit: 1rem;
+
+// layout
+$layout__max-width: 964px;
+
+// borders
+$border: 1px solid #CCCDD0;
+
+//breakpoint
+$breakpoint: 1024px;

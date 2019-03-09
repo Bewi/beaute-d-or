@@ -1,0 +1,44 @@
+footer {
+    background-color: $color__primary;
+    color: $color__text-primary;
+    font-size: $text__l;
+    font-weight: 300;
+    padding: (10 * $spacing-unit) 0;
+
+    .contact {
+        max-width: $layout__max-width;
+        margin: 0 auto;
+
+        .flex > div {
+            flex-basis: 33%;
+            margin: 0 $spacing-unit;
+
+            &:first-child {
+                margin-left: 0;
+            }
+
+            &:last-child {
+                margin-right: 0;
+            }
+        }
+    }
+
+    h6 {
+        margin: 0;
+    }
+    
+    a {
+        color: $color__text-primary;
+        text-decoration: none;
+    }
+
+    p {
+        margin-top: 2 * $spacing-unit;
+        margin-bottom: 2 * $spacing-unit;
+        line-height: 26px;
+    }
+
+    &.entry-footer {
+        display: none;
+    }
+}

@@ -1,0 +1,53 @@
+.wpforms-container form, form {
+    label {
+        font-size: $text__xs;
+        text-transform: uppercase;
+        font-weight: bold;
+        line-height: 24px;
+        margin-bottom: $spacing-unit;
+    }
+
+    input, textarea {
+        border: 1px solid $color__fancy;
+        border-radius: 2px;
+        &:focus {
+            outline: none;
+        }
+    }
+
+    input {
+        height: 5rem;
+        padding: $spacing-unit;
+        font-family: $font-family;
+        font-size: $text__m;
+    }
+
+    .wpforms-field {
+        padding: 0;
+        margin-bottom: 3 * $spacing-unit; 
+    }
+
+    .wpforms-submit-container {
+        padding: 0;
+    }
+}
+
+button, 
+a.wp-block-button__link,
+a.wp-block-button__link:hover {
+    background: $color__secondary;
+    color: $color__primary;
+    border: 2px solid $color__primary;
+    height: 5rem;
+    border-radius: 2.5rem;
+    font-size: $text__m;
+    font-weight: 600;
+    font-family: $font-family;
+    padding-left:(3 * $spacing-unit);
+    padding-right:(3 * $spacing-unit);
+    box-sizing: border-box;
+}
+
+.wp-block-button {
+    margin: 0;
+}

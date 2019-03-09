@@ -1,0 +1,86 @@
+header.site-header {
+    background-color: $color__primary;
+    color: $color__text-primary;
+    padding-top: 6 * $spacing-unit;
+    padding-bottom: 6 * $spacing-unit;
+    font-weight: 600;
+
+    @include breakpoint {
+        padding: 3 * $spacing-unit 2 * $spacing-unit;
+    }
+
+    .main-navigation, .site-logo, .site-title, .social-navigation {
+        display: inline-block;
+        margin: 0;
+    }
+
+    .site-logo {
+        vertical-align: middle;
+        margin-right: $spacing-unit / 2;
+        a {
+            max-height: 34px;
+        }
+    }
+
+    .site-title {
+        font-size: $text__m;
+        flex-grow: 1;
+    }
+
+    .site-branding-container {
+        margin: 0 auto;
+        max-width: $layout__max-width;
+        height: 38px;
+        min-height: 38px;
+        line-height: 19px;
+    }
+
+    .site-branding {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+    }
+
+    .main-menu {
+        height: 2rem;
+    }
+
+    a {
+        color: $color__text-primary;
+        text-decoration: none;
+        max-height: 26px;
+         .screen-reader-text {
+            display: none;
+        }
+
+        svg {
+            fill: $color__text-primary;
+        }
+    }
+
+    ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        font-size: $text__s;
+
+        > li {
+            display: inline-block;
+            
+            &.current-menu-item {
+                padding-bottom: 0.7 * $spacing-unit;
+                border-bottom: 0.3 * $spacing-unit solid $color__text-primary;
+            }
+
+            a {
+                display: inline-block;
+                vertical-align: middle;
+                text-transform: uppercase;
+            }
+        }
+    }
+
+    .main-navigation li {
+        margin: 0 $spacing-unit;
+    }
+}

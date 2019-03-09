@@ -1,0 +1,40 @@
+.wp-block-table { 
+    border: $border;
+    border-radius: 3px;
+    margin-top: 5 * $spacing-unit;
+    font-size: $text__s;
+
+    tr {
+        border-bottom: $border;
+        font-weight: bold;
+    
+        &:first-child td{
+            font-weight: bold !important;
+            font-size: $text__xs;
+            text-transform: uppercase;
+        }
+
+        td:nth-child(2) {
+            font-weight: 300;
+        }
+    }
+
+    td {
+        border: 0px;
+        padding: 2 * $spacing-unit;
+    }
+
+    td:first-child {
+        width: 206px;
+    }
+
+    td:last-child {
+        width: 124px;
+        text-align: right;
+    }
+
+    td:nth-child(3) {
+        width: 62px;
+        text-align: right;
+    }
+}

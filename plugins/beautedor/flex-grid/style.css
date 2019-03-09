@@ -1,0 +1,104 @@
+.wp-block-beautedor-flex-grid.flex-grid__header {
+    text-transform: uppercase;
+}
+
+.wp-block-beautedor-flex-grid {
+    display: flex;
+    flex-direction: row;
+    border: 1px solid #CCCDD0;
+    font-weight: 600;
+    color: #333643;
+}
+
+.wp-block-beautedor-flex-grid + .wp-block-beautedor-flex-grid {
+    margin-top: -1px;
+}
+
+.wp-block-beautedor-flex-grid > div, 
+.wp-block-beautedor-flex-grid > div:last-child > div {
+    padding: 2rem 1rem 2rem 2rem;
+    box-sizing: border-box;
+}
+
+.wp-block-beautedor-flex-grid > div:last-child > div {
+    width: 50%;
+    max-width: 50%;
+    min-width: 50%;
+}
+
+.wp-block-beautedor-flex-grid > div:last-child {
+    display: flex;
+    flex-direction: row;
+    border: none;
+    padding: 0px;
+}
+
+.wp-block-beautedor-flex-grid > div:last-child > div:first-child{
+    border-right: 1px solid #CCCDD0;
+}
+
+.wp-block-beautedor-flex-grid > div:nth-child(1),
+.wp-block-beautedor-flex-grid > div:nth-child(3) {
+    width: 25%;
+    max-width: 25%;
+    min-width: 25%;
+}
+
+.wp-block-beautedor-flex-grid > div:nth-child(2) {
+    flex-grow: 1;
+    border-right: 1px solid #CCCDD0;
+    border-left: 1px solid #CCCDD0;
+    font-weight: 300;
+}
+
+@media screen and (max-width:1024px){
+    .wp-block-beautedor-flex-grid.flex-grid__header {
+        display: none;
+    }
+
+    .wp-block-beautedor-flex-grid {
+        flex-direction: column;
+        padding: 2rem;
+    }
+
+    .wp-block-beautedor-flex-grid div {
+        border: none;
+        padding: 0;
+    }
+
+    .wp-block-beautedor-flex-grid > div, 
+    .wp-block-beautedor-flex-grid > div:last-child > div {
+        padding: 0;
+        border: none;
+        width: auto;
+        max-width: none;
+        min-width: auto;
+    }   
+
+    .wp-block-beautedor-flex-grid > div:first-child {
+        margin-bottom: 2rem;
+    }
+
+    .wp-block-beautedor-flex-grid > div:last-child > div {
+        margin-top: 2rem;
+    }
+
+    .wp-block-beautedor-flex-grid > div:nth-child(2) {
+        border: none;
+    }
+    .wp-block-beautedor-flex-grid > div:nth-child(1),
+    .wp-block-beautedor-flex-grid div:nth-child(3) {
+        justify-content: space-between;
+        width: auto;
+        max-width: none;
+        min-width: auto;
+    }
+    
+    .wp-block-beautedor-flex-grid div:nth-child(3) {
+        justify-content: space-between;
+    }
+
+    .wp-block-beautedor-flex-grid > div:last-child > div:first-child{
+        border-right: none;
+    }
+}

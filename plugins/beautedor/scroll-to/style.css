@@ -1,0 +1,32 @@
+.wp-block-beautedor-scroll-to {
+    background-color: rgba(51,54,67,0.1);
+    color: #333643;
+    font-weight: 600;
+    font-size: 1.4rem;
+    padding: 2rem;
+    text-transform: uppercase;
+}
+
+
+.wp-block-beautedor-scroll-to ul {
+    list-style: none;
+    padding: 0px;
+}
+
+.wp-block-beautedor-scroll-to li {
+    display: inline-block;
+    margin-left: 3rem;
+}
+
+.wp-block-beautedor-scroll-to li:first-child {
+    margin-left: 0;
+}
+
+.wp-block-beautedor-scroll-to a {
+    color: #333643;
+    text-decoration: none;
+}
+
+.wp-block-beautedor-scroll-to a:hover {
+    color: #333643;
+}
