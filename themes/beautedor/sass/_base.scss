@@ -12,6 +12,20 @@ body {
     font-size: $font-size__base;
     font-family: $font-family;
     margin: 0px;
+
+    @include breakpoint() {
+        &.admin-bar {
+            .site-header {
+                top: 46px !important;
+            }
+        }
+    }
+}
+
+.site {
+    @include breakpoint {
+        padding-top: 9.8rem;
+    }
 }
 
 .flex {

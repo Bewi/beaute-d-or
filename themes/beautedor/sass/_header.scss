@@ -83,4 +83,73 @@ header.site-header {
     .main-navigation li {
         margin: 0 $spacing-unit;
     }
+
+    @include breakpoint {
+        position: fixed;
+        top: 0;
+        max-height: 100vh;
+        width: 100%;
+        box-sizing: border-box;
+        overflow: hidden;
+
+        .site-branding-container {
+            overflow: hidden;
+            transition: height .3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            &.expanded {
+                height: 100vh !important;
+            }
+        }
+
+        .site-branding {
+            flex-direction: column;
+            align-items: flex-start;
+        }
+
+        .main-navigation {
+            display: block;
+            overflow: hidden;
+            height: auto;
+            width: 100%;
+
+            ul > li {
+                display: block;
+                &.current-menu-item {
+                    padding-bottom: 0;
+                    border-bottom-width: 0.1rem;
+                }
+            }
+        }
+
+        .social-navigation {
+            align-self: flex-end;
+        }
+
+        .main-menu {
+            height: auto;
+        }
+
+        ul {
+            text-align: right;
+            font-size: 2.8rem;
+            font-weight: 300;
+            li {
+                line-height: 5.6rem;
+                a {
+                    padding: 0 0;
+                    max-height: none;
+                }
+            }
+        }
+
+        .site-identity {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            width: 100%;
+
+            button {
+                outline: none;
+            }
+        }
+    }
 }

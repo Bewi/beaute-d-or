@@ -231,6 +231,8 @@ function twentynineteen_scripts() {
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
 	}
+
+	wp_enqueue_script( 'header-nav', get_theme_file_uri( '/js/header-nav.js' ), array(), '1.1', true );
 }
 add_action( 'wp_enqueue_scripts', 'twentynineteen_scripts' );
 
