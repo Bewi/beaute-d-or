@@ -81,6 +81,8 @@ header.site-header {
     display: flex;
     flex-direction: row;
     align-items: center; }
+    header.site-header .site-branding .hamburger {
+      display: none; }
   header.site-header .main-menu {
     height: 2rem; }
   header.site-header a {
@@ -151,7 +153,8 @@ header.site-header {
         flex-direction: row;
         align-items: center;
         width: 100%; }
-        header.site-header .site-identity button {
+        header.site-header .site-identity .hamburger {
+          display: inline-block;
           outline: none; } }
 
 footer {
@@ -286,8 +289,18 @@ a.wp-block-button__link:hover {
   .entry-header .container {
     padding-top: 4rem;
     padding-bottom: 13rem; }
+  .entry-header .home__header {
+    display: flex;
+    flex-direction: row; }
   .entry-header h1 {
-    margin: 0 0 0 0; }
+    margin: 0 0 0 0;
+    flex-grow: 1; }
+  @media (max-width: 1024px) {
+    .entry-header .home__header {
+      flex-direction: column; }
+    .entry-header h1 {
+      font-size: 3.2rem;
+      margin-bottom: 3rem; } }
 
 .treatwell__container {
   padding: 2rem;
@@ -312,7 +325,11 @@ a.wp-block-button__link:hover {
   display: flex; }
   @media (max-width: 1024px) {
     .display-posts-listing {
-      padding: 3rem 2rem; } }
+      padding: 3rem 2rem;
+      margin: -10rem 2rem;
+      flex-direction: column; }
+      .display-posts-listing p {
+        margin-left: 0; } }
   .display-posts-listing:before {
     content: 'Notre derni\00E8re actualit\00E9';
     font-weight: 600;

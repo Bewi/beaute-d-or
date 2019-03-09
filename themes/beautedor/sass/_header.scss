@@ -39,6 +39,10 @@ header.site-header {
         display: flex;
         flex-direction: row;
         align-items: center;
+
+        .hamburger {
+            display: none;
+        }
     }
 
     .main-menu {
@@ -147,7 +151,8 @@ header.site-header {
             align-items: center;
             width: 100%;
 
-            button {
+            .hamburger {
+                display: inline-block;
                 outline: none;
             }
         }

@@ -10,8 +10,8 @@
 $discussion = ! is_page() && twentynineteen_can_show_post_thumbnail() ? twentynineteen_get_discussion_data() : null; ?>
 
 <?php if( is_home() || is_front_page() ) { ?>
-	<div class="flex flex-row">
-		<h1 class="flex-grow"><?php the_title() ?></h1>
+	<div class="home__header">
+		<h1><?php the_title() ?></h1>
 		<div class="treatwell__container">
 			<iframe class="treatwell" src="https://www.treatwell.be/fr/salon/4735/review-widget"></iframe>
 		</div>

@@ -7,8 +7,25 @@
         padding-bottom: 13rem;
     }
 
+    .home__header {
+        display: flex;
+        flex-direction: row;
+    }
+
     h1 {
         margin: 0 0 0 0;
+        flex-grow: 1;
+    }
+
+    @include breakpoint {
+        .home__header {
+            flex-direction: column;
+        }
+
+        h1 {
+            font-size: 3.2rem;
+            margin-bottom: 3rem;
+        }
     }
 }
 
@@ -38,6 +55,12 @@
 
     @include breakpoint {
         padding: 3rem 2rem;
+        margin: -10rem 2rem;
+        flex-direction: column;
+
+        p {
+            margin-left: 0;
+        }
     }
 
     &:before {
