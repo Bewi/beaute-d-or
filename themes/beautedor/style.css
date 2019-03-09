@@ -343,6 +343,16 @@ a.wp-block-button__link:hover {
   .display-posts-listing li {
     flex-grow: 1; }
 
+#sb_instagram {
+  overflow: hidden !important;
+  margin-top: 3rem; }
+  #sb_instagram .sbi_item .sbi_photo_wrap {
+    padding: 0 1rem; }
+  #sb_instagram .sbi_item:first-child .sbi_photo_wrap {
+    padding-left: 0; }
+  #sb_instagram .sbi_item:last-child .sbi_photo_wrap {
+    padding-right: 0; }
+
 .events__header {
   height: auto;
   background: linear-gradient(0, #FFF 50%, #333643 50%);

@@ -84,3 +84,20 @@
     }
 
 }
+
+#sb_instagram {
+    overflow: hidden !important;
+    margin-top: 3rem;
+
+    .sbi_item .sbi_photo_wrap {
+        padding: 0 1rem;       
+    }
+
+    .sbi_item:first-child .sbi_photo_wrap{
+        padding-left: 0;
+    }
+    
+    .sbi_item:last-child .sbi_photo_wrap{
+        padding-right: 0;
+    }
+}
