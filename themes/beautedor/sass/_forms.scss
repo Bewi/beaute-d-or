@@ -33,8 +33,12 @@
 }
 
 button, 
+.btn,
 a.wp-block-button__link,
 a.wp-block-button__link:hover {
+    display: inline-block;
+    text-decoration: none;
+    line-height: 4.6rem;
     background: $color__secondary;
     color: $color__primary;
     border: 2px solid $color__primary;
@@ -46,6 +50,12 @@ a.wp-block-button__link:hover {
     padding-left:(3 * $spacing-unit);
     padding-right:(3 * $spacing-unit);
     box-sizing: border-box;
+
+
+    &:after {
+        content: "\2192";
+        padding-left: 1rem;
+    }
 }
 
 .wp-block-button {

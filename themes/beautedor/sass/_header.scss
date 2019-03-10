@@ -42,6 +42,10 @@ header.site-header {
 
         .hamburger {
             display: none;
+
+            &:after {
+                content: '';
+            }
         }
     }
 
@@ -95,6 +99,7 @@ header.site-header {
         width: 100%;
         box-sizing: border-box;
         overflow: hidden;
+        z-index: 999;
 
         .site-branding-container {
             overflow: hidden;

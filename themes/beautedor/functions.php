@@ -355,3 +355,54 @@ function tribe_events_event_info( $event = null, $before = '', $after = '' ) {
 	$schedule = $before . $inner . $after;
 	return apply_filters( 'tribe_events_event_schedule_details', $schedule, $event->ID, $before, $after );
 }
+
+// CUSTOM //
+function lazer_next_dates() {
+	$response = wp_remote_get("https://www.laserontharing.be/banners/generate.php?lang=fr&s=vrouwen&w=500&h=100&inst_id=512");
+	$body = $response["body"];
+	$pattern = "/<li ?.*>(.*)<\/li>/";
+	$linkPattern = '/href=\"(.*)\"/';
+	preg_match_all($pattern, $body, $nextDatesMatches);
+	preg_match_all($linkPattern, $body, $hrefMatches);
+
+	$nextDates = $nextDatesMatches[0][0];
+	$nextDates = str_replace(array('|', '<li>Prochaine session le :</li>'), '', $nextDates);
+	
+	$href = $hrefMatches[1][0];
+
+	$element = '<div class="container lazer">';
+	$element .= '<h3>Nos prochaines épilations lasers :</h3>';
+    $element .= '<div class="lazer__info">';
+    $element .= '<ul>' . $nextDates . '</ul>';
+    $element .= '<img src="" alt=""/>';
+    $element .= '</div>';
+    $element .= '<a href="' . $href . '" class="btn">Plus d\'informations</a>';
+	$element .= '</div>';
+
+	return $element;
+}
+
+add_shortcode( 'lazer', 'lazer_next_dates' );
+
+function next_tribe_event() {
+	$events = tribe_get_events( array( 
+		'posts_per_page' => 1,
+		'start_date' => date( 'Y-m-d H:i:s' )
+	 ) );
+
+	$event = $events[0];
+	$featured_image = tribe_event_featured_image($event->ID, 'medium', false);
+
+	$element = '<div class="container next-event">';
+	$element .= '<h3>Prochaine Beauty School :</h3>';
+    $element .= '<div class="next-event__info">';
+    $element .= '<p>' . $event->post_title . '</p>';
+    $element .=  $featured_image;
+    $element .= '</div>';
+    $element .= '<a href="beauty-school" class="btn">Découvrir les beauty school</a>';
+	$element .= '</div>';
+
+	return $element;
+}
+
+add_shortcode( 'next-tribe-event', 'next_tribe_event' );

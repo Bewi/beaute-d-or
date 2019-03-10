@@ -83,6 +83,8 @@ header.site-header {
     align-items: center; }
     header.site-header .site-branding .hamburger {
       display: none; }
+      header.site-header .site-branding .hamburger:after {
+        content: ''; }
   header.site-header .main-menu {
     height: 2rem; }
   header.site-header a {
@@ -116,7 +118,8 @@ header.site-header {
       max-height: 100vh;
       width: 100%;
       box-sizing: border-box;
-      overflow: hidden; }
+      overflow: hidden;
+      z-index: 999; }
       header.site-header .site-branding-container {
         overflow: hidden;
         transition: height 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275); }
@@ -189,6 +192,9 @@ footer {
   width: 100%;
   overflow: auto;
   margin-bottom: 16rem; }
+  @media (max-width: 1024px) {
+    .site-content section {
+      margin-bottom: 6rem; } }
   .site-content section .site-main > article > * {
     max-width: 964px;
     margin: 0 auto; }
@@ -213,7 +219,8 @@ footer {
   margin: 0 auto; }
   @media (max-width: 1024px) {
     .container {
-      padding: 0 2rem;
+      padding-right: 2rem !important;
+      padding-left: 2rem !important;
       box-sizing: border-box; } }
 
 .wpforms-container form label, form label {
@@ -239,8 +246,12 @@ footer {
   padding: 0; }
 
 button,
+.btn,
 a.wp-block-button__link,
 a.wp-block-button__link:hover {
+  display: inline-block;
+  text-decoration: none;
+  line-height: 4.6rem;
   background: #fff;
   color: #333643;
   border: 2px solid #333643;
@@ -252,6 +263,12 @@ a.wp-block-button__link:hover {
   padding-left: 3rem;
   padding-right: 3rem;
   box-sizing: border-box; }
+  button:after,
+  .btn:after,
+  a.wp-block-button__link:after,
+  a.wp-block-button__link:hover:after {
+    content: "\2192";
+    padding-left: 1rem; }
 
 .wp-block-button {
   margin: 0; }
@@ -294,18 +311,25 @@ a.wp-block-button__link:hover {
     flex-direction: row; }
   .entry-header h1 {
     margin: 0 0 0 0;
-    flex-grow: 1; }
+    flex-grow: 1;
+    padding-right: 16rem; }
   @media (max-width: 1024px) {
     .entry-header .home__header {
       flex-direction: column; }
     .entry-header h1 {
       font-size: 3.2rem;
-      margin-bottom: 3rem; } }
+      margin-bottom: 3rem;
+      padding-right: 0; } }
 
 .treatwell__container {
   padding: 2rem;
   border-radius: 3px;
   background-color: white; }
+  @media (max-width: 1024px) {
+    .treatwell__container {
+      width: 168px;
+      height: 155px;
+      margin: auto; } }
 
 .treatwell {
   border: none;
@@ -322,14 +346,16 @@ a.wp-block-button__link:hover {
   border-radius: .3rem;
   padding: 5rem 4rem;
   margin-top: -6rem;
+  margin-bottom: 16rem;
   display: flex; }
   @media (max-width: 1024px) {
     .display-posts-listing {
       padding: 3rem 2rem;
-      margin: -10rem 2rem;
+      margin: -10rem 2rem 6rem 2rem;
       flex-direction: column; }
       .display-posts-listing p {
-        margin-left: 0; } }
+        margin-left: 0 !important;
+        margin-top: 1rem !important; } }
   .display-posts-listing:before {
     content: 'Notre derni\00E8re actualit\00E9';
     font-weight: 600;
@@ -346,12 +372,42 @@ a.wp-block-button__link:hover {
 #sb_instagram {
   overflow: hidden !important;
   margin-top: 3rem; }
+  @media (max-width: 1024px) {
+    #sb_instagram {
+      height: 110px !important; } }
   #sb_instagram .sbi_item .sbi_photo_wrap {
     padding: 0 1rem; }
   #sb_instagram .sbi_item:first-child .sbi_photo_wrap {
     padding-left: 0; }
   #sb_instagram .sbi_item:last-child .sbi_photo_wrap {
     padding-right: 0; }
+
+.lazer, .next-event {
+  margin-bottom: 16rem; }
+  @media (max-width: 1024px) {
+    .lazer, .next-event {
+      margin-bottom: 6rem; }
+      .lazer img, .next-event img {
+        display: none; } }
+  .lazer .lazer__info, .lazer .next-event__info, .next-event .lazer__info, .next-event .next-event__info {
+    display: flex;
+    flex-direction: row; }
+    @media (max-width: 1024px) {
+      .lazer .lazer__info, .lazer .next-event__info, .next-event .lazer__info, .next-event .next-event__info {
+        flex-direction: column; } }
+  .lazer p, .lazer ul, .next-event p, .next-event ul {
+    margin: 0 0 2rem 0;
+    font-size: 4.8rem;
+    font-weight: 300;
+    line-height: 7.2rem;
+    flex-grow: 1; }
+    @media (max-width: 1024px) {
+      .lazer p, .lazer ul, .next-event p, .next-event ul {
+        font-size: 2.8rem;
+        line-height: 3.8rem; } }
+  .lazer ul, .next-event ul {
+    padding-left: 0px;
+    list-style: none; }
 
 .events__header {
   height: auto;

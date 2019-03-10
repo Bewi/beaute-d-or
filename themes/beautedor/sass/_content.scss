@@ -4,6 +4,10 @@
         overflow: auto;
         margin-bottom: (16 * $spacing-unit);
 
+        @include breakpoint {
+            margin-bottom: (6* $spacing-unit);
+        }
+
         .site-main > article {
             > * {
                 max-width: $layout__max-width;
@@ -40,7 +44,8 @@
     margin: 0 auto;
 
     @include breakpoint {
-        padding: 0 2rem;
+        padding-right:2rem !important;
+        padding-left:2rem !important;
         box-sizing: border-box;
     }
 }

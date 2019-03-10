@@ -15,6 +15,7 @@
     h1 {
         margin: 0 0 0 0;
         flex-grow: 1;
+        padding-right: 16rem;
     }
 
     @include breakpoint {
@@ -25,6 +26,7 @@
         h1 {
             font-size: 3.2rem;
             margin-bottom: 3rem;
+            padding-right: 0;
         }
     }
 }
@@ -33,6 +35,12 @@
     padding: 2rem;
     border-radius: 3px;
     background-color: white;
+
+    @include breakpoint {
+        width: 168px;
+        height: 155px;
+        margin: auto;
+    }
 }
 
 .treatwell {
@@ -51,15 +59,17 @@
     border-radius: .3rem;
     padding: 5rem 4rem;
     margin-top: -6rem;
+    margin-bottom: 16rem;
     display: flex;
 
     @include breakpoint {
         padding: 3rem 2rem;
-        margin: -10rem 2rem;
+        margin: -10rem 2rem 6rem 2rem;
         flex-direction: column;
 
         p {
-            margin-left: 0;
+            margin-left: 0 !important;
+            margin-top: 1rem !important;
         }
     }
 
@@ -89,6 +99,10 @@
     overflow: hidden !important;
     margin-top: 3rem;
 
+     @include breakpoint {
+         height: 110px !important;
+     }
+
     .sbi_item .sbi_photo_wrap {
         padding: 0 1rem;       
     }
@@ -99,5 +113,44 @@
     
     .sbi_item:last-child .sbi_photo_wrap{
         padding-right: 0;
+    }
+}
+
+
+.lazer, .next-event {
+    margin-bottom: 16rem;
+
+    @include breakpoint {
+        margin-bottom: 6rem;
+        img {
+            display: none;
+        }
+    }
+
+    .lazer__info, .next-event__info {
+        display: flex;
+        flex-direction: row;
+
+        @include breakpoint {
+            flex-direction: column;
+        }
+    }
+
+    p, ul {
+        margin: 0 0 2rem 0;
+        font-size: 4.8rem;
+        font-weight: 300;
+        line-height: 7.2rem;
+        flex-grow: 1;
+
+        @include breakpoint {
+            font-size: 2.8rem;
+            line-height: 3.8rem;
+        }
+    }
+
+    ul {
+        padding-left: 0px;
+        list-style: none;
     }
 }
