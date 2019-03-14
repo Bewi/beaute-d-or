@@ -370,11 +370,14 @@ function lazer_next_dates() {
 	
 	$href = $hrefMatches[1][0];
 
+	// $imgSrc = base_url() . 'beautedor/images/laser.jpg';
+	$imgSrc = get_template_directory_uri() . '/images/laser.jpg';
+
 	$element = '<div class="container lazer">';
 	$element .= '<h3>Nos prochaines épilations lasers :</h3>';
     $element .= '<div class="lazer__info">';
     $element .= '<ul>' . $nextDates . '</ul>';
-    $element .= '<img src="" alt=""/>';
+    $element .= '<div><img src="' . $imgSrc . '" alt="" /></div>';
     $element .= '</div>';
     $element .= '<a href="' . $href . '" class="btn">Plus d\'informations</a>';
 	$element .= '</div>';

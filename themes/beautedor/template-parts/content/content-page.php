@@ -13,11 +13,14 @@
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 	<?php if ( ! twentynineteen_can_show_post_thumbnail() ) : ?>
+	<?php if( is_home() || is_front_page() ) { ?>
 	<header class="entry-header">
 		<div class="container">
 			<?php get_template_part( 'template-parts/header/entry', 'header' ); ?>
 		</div>
 	</header>
+	<?php } ?>
+
 	<?php endif; ?>
 
 	<div class="entry-content">

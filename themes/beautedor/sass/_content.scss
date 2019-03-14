@@ -6,9 +6,18 @@
 
         @include breakpoint {
             margin-bottom: (6* $spacing-unit);
+
+            .site-main > article {
+                 > * {
+                    margin-right: 2rem !important;
+                    margin-left: 2rem !important;
+                }
+            }
         }
 
         .site-main > article {
+            overflow-x: hidden;
+        
             > * {
                 max-width: $layout__max-width;
                 margin: 0 auto;
@@ -17,7 +26,7 @@
             > footer, 
             > header {
                 max-width: none;
-                margin: 0;
+                margin: 0 !important;
             }           
         }
     }
@@ -38,14 +47,29 @@
     }
 }
 
-.container { 
+.container, .wp-block-beautedor-scroll-to ul { 
     max-width: $layout__max-width;
     width: 100%;
     margin: 0 auto;
 
     @include breakpoint {
-        padding-right:2rem !important;
-        padding-left:2rem !important;
         box-sizing: border-box;
+    }
+}
+
+.wp-block-beautedor-scroll-to {
+    margin-left: calc(-100vw / 2 + #{$layout__max-width} / 2);
+    margin-right: calc(-100vw / 2 + #{$layout__max-width} / 2);
+
+    @include breakpoint {
+        display: none;
+    }
+}
+
+.wp-block-beautedor-info-block {
+    margin-top: 6rem;
+
+    @include breakpoint {
+        margin-top: 2rem;
     }
 }

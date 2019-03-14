@@ -3,6 +3,7 @@
     border-radius: 3px;
     margin-top: 5 * $spacing-unit;
     font-size: $text__s;
+    font-weight: 600;
 
     tr {
         border-bottom: $border;
@@ -13,19 +14,11 @@
             font-size: $text__xs;
             text-transform: uppercase;
         }
-
-        td:nth-child(2) {
-            font-weight: 300;
-        }
     }
 
     td {
         border: 0px;
         padding: 2 * $spacing-unit;
-    }
-
-    td:first-child {
-        width: 206px;
     }
 
     td:last-child {
@@ -36,5 +29,27 @@
     td:nth-child(3) {
         width: 62px;
         text-align: right;
+    }
+
+    &.responsive-table {
+        @include breakpoint {
+            display: block;
+            tbody, tr, td {
+                display: block;
+                width: 100%;
+                box-sizing: border-box;
+            }
+
+            tr {
+                padding: 1.5rem 2rem;
+                &:first-child { display: none; }
+                &:last-child { border-bottom: none; }
+            }
+
+            td {
+                text-align: left;
+                padding: .5rem 0;
+            }
+        }
     }
 }

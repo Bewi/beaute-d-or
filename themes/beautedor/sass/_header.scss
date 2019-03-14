@@ -14,6 +14,10 @@ header.site-header {
         margin: 0;
     }
 
+    .site-identity {
+        flex-grow: 1;
+    }
+
     .site-logo {
         vertical-align: middle;
         margin-right: $spacing-unit / 2;
@@ -70,7 +74,7 @@ header.site-header {
         list-style: none;
         margin: 0;
         padding: 0;
-        font-size: $text__s;
+        font-size: $text__xs;
 
         > li {
             display: inline-block;
@@ -89,7 +93,7 @@ header.site-header {
     }
 
     .main-navigation li {
-        margin: 0 $spacing-unit;
+        margin: 0 .7rem;
     }
 
     @include breakpoint {
@@ -119,12 +123,21 @@ header.site-header {
             overflow: hidden;
             height: auto;
             width: 100%;
+            margin-top: 5rem;
 
             ul > li {
                 display: block;
                 &.current-menu-item {
                     padding-bottom: 0;
-                    border-bottom-width: 0.1rem;
+                    border-bottom-width: 0;
+
+                    a {
+                        border-bottom: 1px solid white;
+                    }
+                }
+
+                a {
+                    text-transform: none !important;
                 }
             }
         }

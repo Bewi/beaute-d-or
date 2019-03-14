@@ -1,34 +1,52 @@
-.wpforms-container form, form {
+div.wpforms-container-full form.wpforms-form.beaute-form, form {
     label {
-        font-size: $text__xs;
-        text-transform: uppercase;
-        font-weight: bold;
-        line-height: 24px;
-        margin-bottom: $spacing-unit;
+        font-size: $text__xs !important;
+        text-transform: uppercase !important;
+        font-weight: bold !important;
+        line-height: 24px !important;
+        margin-bottom: $spacing-unit !important;
     }
 
-    input, textarea {
-        border: 1px solid $color__fancy;
-        border-radius: 2px;
+    input, input, textarea {
+        border: 1px solid $color__fancy !important;
+        border-radius: 2px !important;
         &:focus {
-            outline: none;
+            outline: none !important;
         }
     }
 
     input {
-        height: 5rem;
-        padding: $spacing-unit;
-        font-family: $font-family;
-        font-size: $text__m;
+        height: 5rem !important;
+        padding: $spacing-unit !important;
+        font-family: $font-family !important;
+        font-size: $text__m !important;
     }
 
     .wpforms-field {
-        padding: 0;
-        margin-bottom: 3 * $spacing-unit; 
+        padding: 0 !important;
+        margin-bottom: 3 * $spacing-unit !important; 
     }
 
     .wpforms-submit-container {
-        padding: 0;
+        padding: 0 !important;
+    }
+
+    button {
+        display: inline-block !important;
+        text-decoration: none !important;
+        line-height: 4.6rem !important;
+        background: $color__secondary !important;
+        color: $color__primary !important;
+        border: 2px solid $color__primary !important;
+        height: 5rem !important;
+        border-radius: 2.5rem !important;
+        font-size: $text__m !important;
+        font-weight: 600 !important;
+        font-family: $font-family !important;
+        padding-left:(3 * $spacing-unit) !important;
+        padding-right:(3 * $spacing-unit) !important;
+        box-sizing: border-box !important;
+        padding-top: 0 !important;
     }
 }
 
@@ -50,8 +68,11 @@ a.wp-block-button__link:hover {
     padding-left:(3 * $spacing-unit);
     padding-right:(3 * $spacing-unit);
     box-sizing: border-box;
+    padding-top: 0px;
+}
 
 
+a.wp-block-button__link.external {
     &:after {
         content: "\2192";
         padding-left: 1rem;

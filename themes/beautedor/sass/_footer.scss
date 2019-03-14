@@ -3,11 +3,12 @@ footer {
     color: $color__text-primary;
     font-size: $text__l;
     font-weight: 300;
-    padding: (10 * $spacing-unit) 0;
+    padding: (10 * $spacing-unit) 0 0 0;
 
     .contact {
         max-width: $layout__max-width;
         margin: 0 auto;
+        padding-bottom: (10 * $spacing-unit);
 
         .flex > div {
             flex-basis: 33%;
@@ -40,5 +41,84 @@ footer {
 
     &.entry-footer {
         display: none;
+    }
+
+    @include breakpoint {
+        padding: 3rem 0;
+        .contact { 
+            padding-bottom: 0;
+        }
+    }
+}
+
+footer .flex.flex-row {
+    .no-title {
+        padding-top: 2rem;
+    }
+
+    span {
+        float: right;
+        font-weight: 600;
+    }
+
+    @include breakpoint {
+        .no-title {
+            padding-top: 0px;
+            margin-top: 0px;
+        }
+
+        flex-direction: column;
+        padding: 2rem;
+
+        > div {
+            margin: 0;
+        }
+    }
+}
+
+
+footer {
+    .widget_media_gallery {
+        background-color: white;
+        width: 100%;
+        padding: 3rem 0;
+        color: $color__text-secondary;
+
+
+        h2 {
+            font-size: 1.6rem;
+            margin-bottom: 2rem;
+        }
+
+        h2, .gallery {
+            max-width: $layout__max-width;
+            width: 100%;
+            margin-right: auto;
+            margin-left: auto;
+        }
+
+        .gallery {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        img {
+            max-height: 5rem;
+            height: 5rem;
+            width: auto;
+        } 
+
+        figure {
+            display: inline-block;
+            margin: 0 1rem;
+        }
+
+        .gallery-caption {
+            display: none;
+        }
+
+        @include breakpoint {
+            display: none;
+        }
     }
 }

@@ -104,11 +104,6 @@
 .tribe-events-event-image{
     width: 300px;
 
-    img {
-        width: 100%;
-        max-width: 100%;
-    }
-
     @include breakpoint {
         display: none;
     }
